@@ -8,3 +8,44 @@ let graph_1_width = (MAX_WIDTH / 2) - 10, graph_1_height = 250;
 let graph_2_width = (MAX_WIDTH / 2) - 10, graph_2_height = 275;
 let graph_3_width = MAX_WIDTH / 2, graph_3_height = 575;
 
+let svg_2 = d3.select("#graph2")
+    .append("svg")
+    .attr("width", graph_1_width)     // HINT: width
+    .attr("height", graph_1_height)     // HINT: height
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
+
+var map_q2 = d3.map()
+
+
+var map_proj = d3.geoMercator().translate([graph_1_width / 2, graph_1_height / 2]);
+var outlines = d3.geoPath()
+
+var color = d3.scaleThreshold()
+    .domain(d3.range(2, 10))
+    .range(d3.schemeBlues[9]);
+
+var dataset = [
+    d3.json("https://unpkg.com/world-atlas@1/world/110m.json"),
+    d3.csv("/data/football_clean_q2.csv", function (d) {map_q2.set(d.country_code, d.win_percent)})
+]
+
+Promise.all(dataset).then(execute)
+
+function execute([input]) {
+    svg_2.append("g").attr("class", "countries")
+    .selectAll("path")
+    .data(topojson.feature(input, input.objects.countries).features)
+    .enter().append("path")
+    .attr("fill", function(d) { return color(d.win_percent = map_q2.get(d.country_code)); })
+    .attr("d", outlines)
+
+
+}
+
+    
+
+
+
+
+
