@@ -15,47 +15,70 @@ let svg_2 = d3.select("#graph2")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-var map_q2 = d3.map()
+function setData(val) {
 
-var outlines = d3.geoPath()
-var map_proj = d3.geoMercator().scale(50).center([0,0]).translate([graph_1_width / 2, graph_1_height / 2]);
+    d3.csv("/data/football_clean_q2.csv").then(function(data) {
 
 
-// var color = d3.scaleThreshold()
-//   .domain([0, 10, 20, 30, 40, 50, 60, 70, 80, 90,100])
-//   .range(d3.schemeBlues[9]);
+    
+        var map_q2 = d3.map()
+    
+        var outlines = d3.geoPath()
+        var map_proj = d3.geoMercator().scale(50).center([0,0]).translate([graph_1_width / 2, graph_1_height / 2]);
 
-var dataset = [
-    d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
-    d3.csv("/data/football_clean_q2.csv", function (d) {map_q2.set(d.country_code, +parseFloat(d.win_percent))})
-]
+        data = cleanData(data, compare, val);
 
-var color = d3.scaleSequential(d3.interpolateYlGnBu).domain([0, 70])
+        console.log(data)
 
-console.log(map_q2)
 
-Promise.all(dataset).then(execute)
+        var dataset = [
+            d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
+            // d3.csv("/data/football_clean_q2.csv", function (d) {map_q2.set(d.country_code, +parseFloat(d.win_percent))})
+            d3.map(data, function (d) {map_q2.set(d.country_code, +parseFloat(d.win_percent))})
+        ]
 
-function execute([input]) {
-    svg_2.append("g")
-    .attr("class","countries")
-    .selectAll("path")
-    .data(input.features)
-    .enter().append("path")
-    .attr("d", d3.geoPath().projection(map_proj))
-    // .attr("fill", function(d) { return color(d.win_percent = map_q2.get(d.country_code)); })
-    .attr("fill", function (d) {
-        d.total = map_q2.get(d.id);
-        console.log(d.total)
-        return color(d.total);
-      });
+        var color = d3.scaleSequential(d3.interpolateYlGnBu).domain([d3.min(data, function(d) {return parseInt(d.win_percent)}), d3.max(data, function(d) {return parseInt(d.win_percent)})])
 
+        console.log(map_q2)
+
+        Promise.all(dataset).then(execute)
+
+        function execute([input]) {
+            svg_2.append("g")
+            .attr("class","countries")
+            .selectAll("path")
+            .data(input.features)
+            .enter().append("path")
+            .attr("d", d3.geoPath().projection(map_proj))
+            // .attr("fill", function(d) { return color(d.win_percent = map_q2.get(d.country_code)); })
+            .attr("fill", function (d) {
+                d.total = map_q2.get(d.id);
+                console.log(d.total)
+                return color(d.total);
+            });
+
+
+        }
+    });
 
 }
 
+function compare(a, b) {
+    a = parseInt(a.win_percent)
+    b = parseInt(b.win_percent)
+    return b - a
+ }
+
+/**
+ * Cleans the provided data using the given comparator then strips to first numExamples
+ * instances
+ */
+ function cleanData(data, comparator, numExamples) {
+    sliced_data = data.sort(comparator).slice(0,numExamples)
     
+    return sliced_data   
+    }
 
-
-
+setData(10)
 
 
