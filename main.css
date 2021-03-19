@@ -9,4 +9,10 @@
     text-align: center;
 }
 
+.countries {
+    fill: rgb(223, 221, 221);
+    /* stroke: #000 */
+
+}
+
 /* Include any custom CSS styling here! */
