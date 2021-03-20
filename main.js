@@ -13,6 +13,9 @@ let svg_1 = d3.select("#graph1")
     .attr("width", graph_1_width)
     .attr("height", graph_1_height)
     .append("g")
+    // .call(d3.zoom().on("zoom", function() {
+    //     svg_1.attr("transform", d3.event.transform)
+    // }))
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
 d3.csv("/data/football_clean_q1.csv").then(function(data) {
@@ -25,6 +28,29 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
         .domain([d3.min(data, function(d) {return parseInt(d.tournament)}), d3.max(data, function(d) {return parseInt(d.tournament)})])
         .range([graph_2_height - margin.top - margin.bottom,0])
 
+    svg_1.append("linearGradient")
+        .attr('id', 'line_grad')
+        .attr("x1","0%")
+        .attr("y1","100%")
+        .attr("x2","0%")
+        .attr("y2","0%")
+        .selectAll("stop")
+            .data([
+                {loc: "0%", color: "#ffffd9"},
+                {loc: "12.5%", color: "#edf8b1"},
+                {loc: "25%", color: "#c7e9b4"},
+                {loc: "37.5%", color: "#7fcdbb"},
+                {loc: "50%", color: "#41b6c4"},
+                {loc: "62.5%", color: "#1d91c0"},
+                {loc: "75%", color: "#225ea8"},
+                {loc: "87.5%", color: "#253494"},
+                {loc: "100%", color: "#081d58"}
+            ])
+        .enter().append("stop")
+            .attr("offset", function(d) {return d.loc; })
+            .attr("stop-color", function(d) {return d.color; })
+
+
     svg_1.append("g")
         // .attr("transform", `translate(0,-500)` )
         .call(d3.axisLeft(y_ax));
@@ -36,13 +62,25 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
 
     svg_1.append("path")
         .datum(data)
-        .attr("fill","none")
-        .attr("stroke","black")
-        // .attr("stroke-width", 1.5)
+        .attr("fill","url(#line_grad)")
+        .style("stroke","black")
+        .attr("stroke-width",0.5)
         .attr("d", d3.line()
             .x(function(d) { return x_ax(parseInt(d.date))})
-            .y(function(d) { return y_ax(parseInt(d.tournament))})
-        )       
+            .y(function(d) { return y_ax(parseInt(d.tournament))}))
+
+    svg_1.append("text")
+            .attr("x", (graph_2_width/6))
+            .attr("y", -10)    // HINT: Place this at the top middle edge of the graph
+            .style("text-anchor", "center")
+            .style("font-size", 25)
+            .text("Number of World Cup Games Per Year")
+
+
+
+            
+        
+
 
     svg_1.append("text")
         .attr("transform", `translate(${(graph_2_width - margin.left - margin.right)/2}, ${graph_2_height - 50})`)       // HINT: Place this at the bottom middle edge of the graph - use translate(x, y) that we discussed earlier
@@ -53,8 +91,6 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
         .attr("transform", `translate(${-60}, ${(graph_2_height - margin.top - margin.bottom)/2})`)       // HINT: Place this at the center left edge of the graph - use translate(x, y) that we discussed earlier
         .style("text-anchor", "middle")
         .text("Games");
-
-    console.log(data)
 
 
     }); 
@@ -79,6 +115,18 @@ let title = svg_2.append("text")
     .attr("y", -10)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 25)
+    
+let legend_upper = svg_2.append("text")
+    .attr("x", (margin.left + 85))
+    .attr("y", 260)    // HINT: Place this at the top middle edge of the graph
+    .style("text-anchor", "center")
+    .style("font-size", 15)
+
+let legend_lower = svg_2.append("text")
+    .attr("x", (margin.left + 85))
+    .attr("y", 445)    // HINT: Place this at the top middle edge of the graph
+    .style("text-anchor", "center")
+    .style("font-size", 15)
     
 
 function setData(val) {
@@ -106,6 +154,34 @@ function setData(val) {
         // console.log(map_q2)
 
         Promise.all(dataset).then(execute)
+
+        svg_2.append("linearGradient")
+        .attr('id', 'line_grad')
+        .attr("x1","0%")
+        .attr("y1","100%")
+        .attr("x2","0%")
+        .attr("y2","0%")
+        .selectAll("stop")
+            .data([
+                {loc: "0%", color: "#ffffd9"},
+                {loc: "12.5%", color: "#edf8b1"},
+                {loc: "25%", color: "#c7e9b4"},
+                {loc: "37.5%", color: "#7fcdbb"},
+                {loc: "50%", color: "#41b6c4"},
+                {loc: "62.5%", color: "#1d91c0"},
+                {loc: "75%", color: "#225ea8"},
+                {loc: "87.5%", color: "#253494"},
+                {loc: "100%", color: "#081d58"}
+            ])
+        .enter().append("stop")
+            .attr("offset", function(d) {return d.loc; })
+            .attr("stop-color", function(d) {return d.color; })
+
+        svg_2.append("rect")
+            .attr("width",25)
+            .attr("height",200)
+            .attr("fill","url(#line_grad)")
+            .attr("transform", `translate(${margin.left + 50},${250})`);
 
         let mouseover = function(d) {
             let html = `<strong style="color: #cf6700;">${d.id}</strong><br><p style="color: #cf6700;">${d.total}% wins</p>`;       // HINT: Display the song here
@@ -149,7 +225,8 @@ function setData(val) {
         }
 
         title.text("Top"+" "+val+" "+"Most Winning Countries")
-
+        legend_lower.text((d3.min(data, function(d) {return parseFloat(d.win_percent)})+"%"))
+        legend_upper.text((d3.max(data, function(d) {return parseFloat(d.win_percent)})+"%"))
         
     });
 
