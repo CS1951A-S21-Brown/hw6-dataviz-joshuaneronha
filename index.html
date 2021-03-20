@@ -23,9 +23,12 @@
         <div class="col-lg-6">
             <div id="graph1"></div>
             <div id="graph2"></div><br/>
-            <p>0</p><div class="slidecontainer">
-                <input type="range" min="1" max="125" value="10" class="slider" id="myRange" onchange="setData(this.value)">
-            </div><p>207</p>
+            <div>
+            <p id="slider_line">1</p>
+            <p id="slider_line">125</p>
+            </div>
+
+            <input id="slider_line" type="range" min="1" max="125" value="10" class="slider" id="myRange" onchange="setData(this.value)">
 
         </div>
         <div class="col-lg-6">

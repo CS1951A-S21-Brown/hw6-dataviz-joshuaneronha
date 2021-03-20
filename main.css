@@ -24,5 +24,21 @@
     margin-left: 250px;
 }
 
+.tooltip {
+    position: absolute;
+    font-size: 13px;
+    min-width: 100px;
+    padding: 10px;
+    width:  auto;
+    height: auto;
+    background: #dbe1eb;
+    stroke: black;
+    stroke-width: 5px;
+
+}
+
+#slider_line {display:inline-block;margin-right:10px;margin-left:275px;align="right"}
+
+
 
 /* Include any custom CSS styling here! */
