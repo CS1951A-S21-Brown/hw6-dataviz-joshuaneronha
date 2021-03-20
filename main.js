@@ -1,19 +1,19 @@
 // Add your JavaScript code here
 const MAX_WIDTH = Math.max(1080, window.innerWidth);
 const MAX_HEIGHT = 720;
-const margin = {top: 40, right: 100, bottom: 40, left: 175};
+const margin = {top: 50, right: 100, bottom: 40, left: 175};
 
 // Assumes the same graph width, height dimensions as the example dashboard. Feel free to change these if you'd like
-let graph_1_width = (MAX_WIDTH / 2) - 10, graph_1_height = 250;
-let graph_2_width = (MAX_WIDTH / 2) - 10, graph_2_height = 275;
+let graph_1_width = (MAX_WIDTH / 2) - 10, graph_1_height = 500;
+let graph_2_width = (2*MAX_WIDTH / 3) - 10, graph_2_height = 500;
 let graph_3_width = MAX_WIDTH / 2, graph_3_height = 575;
 
 let svg_2 = d3.select("#graph2")
     .append("svg")
-    .attr("width", graph_1_width)     // HINT: width
-    .attr("height", graph_1_height)     // HINT: height
+    .attr("width", graph_2_width)     // HINT: width
+    .attr("height", graph_2_height)     // HINT: height
     .append("g")
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+    .attr("transform", `translate(${30},${margin.top})`);
 
 function setData(val) {
 
@@ -24,7 +24,7 @@ function setData(val) {
         var map_q2 = d3.map()
     
         var outlines = d3.geoPath()
-        var map_proj = d3.geoMercator().scale(50).center([0,0]).translate([graph_1_width / 2, graph_1_height / 2]);
+        var map_proj = d3.geoMercator().scale(110).center([-15,20]).translate([(graph_1_width / 2), graph_1_height / 2]);
 
         data = cleanData(data, compare, val);
 
@@ -38,7 +38,7 @@ function setData(val) {
         ]
 
         var color = d3.scaleSequential(d3.interpolateYlGnBu).domain([d3.min(data, function(d) {return parseInt(d.win_percent)}), d3.max(data, function(d) {return parseInt(d.win_percent)})])
-
+        // var color = d3.scaleOrdinal().domain([d3.min(data, function(d) {return parseInt(d.win_percent)}), d3.max(data, function(d) {return parseInt(d.win_percent)})]).range(d3.interpolateYlGnBu[9])
         console.log(map_q2)
 
         Promise.all(dataset).then(execute)
@@ -56,7 +56,6 @@ function setData(val) {
                 console.log(d.total)
                 return color(d.total);
             });
-
 
         }
     });

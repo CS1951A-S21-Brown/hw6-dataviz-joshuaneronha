@@ -15,4 +15,14 @@
 
 }
 
+.slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    width: 50%;
+    margin-left: 250px;
+}
+
+
 /* Include any custom CSS styling here! */
