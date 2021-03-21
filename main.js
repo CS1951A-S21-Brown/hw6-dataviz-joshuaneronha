@@ -6,7 +6,7 @@ const margin = {top: 50, right: 100, bottom: 40, left: 100};
 // Assumes the same graph width, height dimensions as the example dashboard. Feel free to change these if you'd like
 let graph_1_width = (2*MAX_WIDTH / 3) - 10, graph_1_height = 500;
 let graph_2_width = (2*MAX_WIDTH / 3) - 10, graph_2_height = 500;
-let graph_3_width = MAX_WIDTH / 4, graph_3_height = 575;
+let graph_3_width = MAX_WIDTH / 3.8, graph_3_height = 1000;
 
 let svg_1 = d3.select("#graph1")
     .append("svg")
@@ -26,7 +26,7 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
     
     let y_ax = d3.scaleLinear()
         .domain([d3.min(data, function(d) {return parseInt(d.tournament)}), d3.max(data, function(d) {return parseInt(d.tournament)})])
-        .range([graph_2_height - margin.top - margin.bottom,0])
+        .range([graph_2_height - margin.top - margin.bottom,30])
 
     svg_1.append("linearGradient")
         .attr('id', 'line_grad')
@@ -237,7 +237,7 @@ let svg_3 = d3.select("#graph3")
     .attr("width", graph_3_width + 100)
     .attr("height", graph_3_height)
     .append("g")
-    .attr("transform", `translate(${margin.left-50},${margin.top})`);
+    .attr("transform", `translate(${margin.left-30},${margin.top})`);
 
 categories = ['total','win_percent','margin','total_games','opp_str']
 
@@ -245,7 +245,7 @@ d3.csv("/data/ques_3.csv").then(function(data) {
 
     let y = d3.scaleBand()
         .domain(data.map(function(d) {return d.home_team}))
-        .range([margin.top, graph_3_height + margin.top - margin.bottom])
+        .range([margin.top, graph_3_height - margin.top - margin.bottom])
         .padding(0.1);
 
     let x = d3.scaleBand()
@@ -255,11 +255,21 @@ d3.csv("/data/ques_3.csv").then(function(data) {
 
     var color = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.5,1])
 
+    var color_total = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.67,0.77])
+    var color_win_percent = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.45,0.8])
+    var color_margin = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.63,1])
+    var color_total_games = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.48,1])
+    var color_opp_str = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.62,0.73])
+
+
+
+
     svg_3.append("g")
         .call(d3.axisLeft(y).tickSize(0).tickPadding(10))
 
     svg_3.append("g")
-        .call(d3.axisBottom(x).tickSize(0).tickPadding(10))
+        .call(d3.axisTop(x).tickSize(0).tickPadding(10))
+        .attr("transform", `translate(0,${margin.top-3})`);
 
     svg_3.selectAll()
         .data(data)
@@ -268,8 +278,14 @@ d3.csv("/data/ques_3.csv").then(function(data) {
         .attr("y", function(d) {return y(d.home_team)})
         .attr("width", x.bandwidth())
         .attr("height", y.bandwidth())
-        .style("fill", function(d) {return color(d.value)})
+        .style("fill", function(d) {
+            if (d.variable == "win_percent") {return color_win_percent(d.value)} 
+            else if (d.variable == "total") {return color_total(d.value)}
+            else if (d.variable == "margin") {return color_margin(d.value)}
+            else if (d.variable == "total_games") {return color_total_games(d.value)}
+            else if (d.variable == "opp_str") {return color_opp_str(d.value)}
 
+        })
 })
 
 

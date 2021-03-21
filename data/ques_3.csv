@@ -1,51 +1,101 @@
 home_team,variable,value
-France,total,0.7403367996143793
-Belgium,total,0.7359974951938136
-Germany,total,0.7359911945518006
-Sweden,total,0.7168364976896796
-Netherlands,total,0.7107345362117955
-Mexico,total,0.7022427427028196
-United States,total,0.6978977897677165
-Croatia,total,0.6931608564501435
-Argentina,total,0.6894668138069843
-Costa Rica,total,0.6879180782130846
-France,win_percent,0.56
-Belgium,win_percent,0.5416666666666666
-Germany,win_percent,0.5
-Sweden,win_percent,0.5909090909090909
-Netherlands,win_percent,0.5263157894736842
-Mexico,win_percent,0.4074074074074074
-United States,win_percent,0.5454545454545454
-Croatia,win_percent,0.46153846153846156
-Argentina,win_percent,0.4583333333333333
-Costa Rica,win_percent,0.4230769230769231
+France,total,0.7704431179776283
+Belgium,total,0.7653102085252819
+Germany,total,0.7640665502714648
+Sweden,total,0.7485899292676563
+Netherlands,total,0.7406237575369296
+United States,total,0.7277158540203619
+Mexico,total,0.7274844887702225
+Croatia,total,0.7191436340787352
+Argentina,total,0.716445511596905
+Costa Rica,total,0.713192331025555
+England,total,0.7130472789223657
+Portugal,total,0.7094327328744499
+Chile,total,0.7082090896604056
+Uruguay,total,0.7031303715454494
+Switzerland,total,0.702098340169067
+Colombia,total,0.7003117620213364
+Australia,total,0.6841506278352958
+Honduras,total,0.6775517434520623
+Egypt,total,0.6765707898449123
+Ukraine,total,0.6759860143968417
+France,win_percent,0.64
+Belgium,win_percent,0.619047619047619
+Germany,win_percent,0.5714285714285714
+Sweden,win_percent,0.6753246753246753
+Netherlands,win_percent,0.6015037593984962
+United States,win_percent,0.6233766233766234
+Mexico,win_percent,0.4656084656084656
+Croatia,win_percent,0.5274725274725275
+Argentina,win_percent,0.5238095238095238
+Costa Rica,win_percent,0.4835164835164835
+England,win_percent,0.5194805194805194
+Portugal,win_percent,0.5442176870748299
+Chile,win_percent,0.8067226890756303
+Uruguay,win_percent,0.4761904761904762
+Switzerland,win_percent,0.4675324675324676
+Colombia,win_percent,0.4968944099378882
+Australia,win_percent,0.6015037593984962
+Honduras,win_percent,0.546583850931677
+Egypt,win_percent,0.7912087912087912
+Ukraine,win_percent,0.6095238095238095
 France,margin,0.8531608133086875
 Belgium,margin,0.8997227356746765
 Germany,margin,1.0
 Sweden,margin,0.8059149722735673
 Netherlands,margin,0.9299542757077537
-Mexico,margin,0.7432737728486342
 United States,margin,0.7948243992606284
+Mexico,margin,0.7432737728486342
 Croatia,margin,0.7632589222238021
 Argentina,margin,0.7573937153419593
 Costa Rica,margin,0.7397980946964311
+England,margin,0.8669131238447318
+Portugal,margin,0.8394507525745972
+Chile,margin,0.7475263672936826
+Uruguay,margin,0.7523105360443622
+Switzerland,margin,0.8003696857670979
+Colombia,margin,0.812424656433336
+Australia,margin,0.7180659597237085
+Honduras,margin,0.6320822952664148
+Egypt,margin,0.7022607706526376
+Ukraine,margin,0.9068391866913124
 France,total_games,0.9259259259259259
 Belgium,total_games,0.8888888888888888
 Germany,total_games,0.8148148148148148
 Sweden,total_games,0.8148148148148148
 Netherlands,total_games,0.7037037037037037
-Mexico,total_games,1.0
 United States,total_games,0.8148148148148148
+Mexico,total_games,1.0
 Croatia,total_games,0.9629629629629629
 Argentina,total_games,0.8888888888888888
 Costa Rica,total_games,0.9629629629629629
-France,opp_str,0.6222604592229036
-Belgium,opp_str,0.6137116895450229
-Germany,opp_str,0.6291499633923875
-Sweden,opp_str,0.6557071127612454
-Netherlands,opp_str,0.6829643759620403
-Mexico,opp_str,0.6582897905552367
-United States,opp_str,0.6364973995408778
-Croatia,opp_str,0.5848830790753471
-Argentina,opp_str,0.6532513176637554
-Costa Rica,opp_str,0.625834332116021
+England,total_games,0.8148148148148148
+Portugal,total_games,0.7777777777777778
+Chile,total_games,0.6296296296296297
+Uruguay,total_games,0.8888888888888888
+Switzerland,total_games,0.8148148148148148
+Colombia,total_games,0.8518518518518519
+Australia,total_games,0.7037037037037037
+Honduras,total_games,0.8518518518518519
+Egypt,total_games,0.48148148148148145
+Ukraine,total_games,0.5555555555555556
+France,opp_str,0.6626857326758999
+Belgium,opp_str,0.6535815904899434
+Germany,opp_str,0.6700228148424732
+Sweden,opp_str,0.6983052546575678
+Netherlands,opp_str,0.7273332913377647
+United States,opp_str,0.6778475786293805
+Mexico,opp_str,0.7010557166237905
+Croatia,opp_str,0.6228801236556482
+Argentina,opp_str,0.6956899183472478
+Costa Rica,opp_str,0.6664917829263427
+England,opp_str,0.6509806575493967
+Portugal,opp_str,0.6762847140705943
+Chile,opp_str,0.6489576726426798
+Uruguay,opp_str,0.6951315850580707
+Switzerland,opp_str,0.7256763925618877
+Colombia,opp_str,0.6400761298622695
+Australia,opp_str,0.7133290885152749
+Honduras,opp_str,0.6796889757583053
+Egypt,opp_str,0.7313321160367388
+Ukraine,opp_str,0.6320255058166893
