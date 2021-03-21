@@ -6,7 +6,7 @@ const margin = {top: 50, right: 100, bottom: 40, left: 100};
 // Assumes the same graph width, height dimensions as the example dashboard. Feel free to change these if you'd like
 let graph_1_width = (2*MAX_WIDTH / 3) - 10, graph_1_height = 500;
 let graph_2_width = (2*MAX_WIDTH / 3) - 10, graph_2_height = 500;
-let graph_3_width = MAX_WIDTH / 2, graph_3_height = 575;
+let graph_3_width = MAX_WIDTH / 4, graph_3_height = 575;
 
 let svg_1 = d3.select("#graph1")
     .append("svg")
@@ -231,6 +231,47 @@ function setData(val) {
     });
 
 }
+
+let svg_3 = d3.select("#graph3")
+    .append("svg")
+    .attr("width", graph_3_width + 100)
+    .attr("height", graph_3_height)
+    .append("g")
+    .attr("transform", `translate(${margin.left-50},${margin.top})`);
+
+categories = ['total','win_percent','margin','total_games','opp_str']
+
+d3.csv("/data/ques_3.csv").then(function(data) {
+
+    let y = d3.scaleBand()
+        .domain(data.map(function(d) {return d.home_team}))
+        .range([margin.top, graph_3_height + margin.top - margin.bottom])
+        .padding(0.1);
+
+    let x = d3.scaleBand()
+        .domain(categories)
+        .range([0, graph_3_width])
+        .padding(0.1)
+
+    var color = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.5,1])
+
+    svg_3.append("g")
+        .call(d3.axisLeft(y).tickSize(0).tickPadding(10))
+
+    svg_3.append("g")
+        .call(d3.axisBottom(x).tickSize(0).tickPadding(10))
+
+    svg_3.selectAll()
+        .data(data)
+        .enter().append("rect")
+        .attr("x", function(d) {return x(d.variable)})
+        .attr("y", function(d) {return y(d.home_team)})
+        .attr("width", x.bandwidth())
+        .attr("height", y.bandwidth())
+        .style("fill", function(d) {return color(d.value)})
+
+})
+
 
 function compare(a, b) {
     a = parseInt(a.win_percent)
