@@ -108,7 +108,11 @@ let svg_2 = d3.select("#graph2")
 let tooltip = d3.select("#graph2")     // HINT: div id for div containing scatterplot
     .append("div")
     .attr("class", "tooltip")
-    .style("opacity", 0);
+    .style("opacity", 0)
+    .style("border", "solid")
+    .style("border-radius", "8px")
+    .style("border-width", "1.5px")
+
 
 let title = svg_2.append("text")
     .attr("x", (graph_2_width/4))
@@ -200,7 +204,7 @@ function setData(val) {
         let mouseout = function(d) {
             // Set opacity back to 0 to hide
             tooltip.transition()
-                .style("background", '#dbe1eb')
+                .style("background", '#ffffff')
                 .duration(200)
                 .style("opacity", 0)
 
@@ -218,6 +222,7 @@ function setData(val) {
                 d.total = map_q2.get(d.id);
                 // console.log(d.total)
                 return color(d.total);
+            
                 
             })
             .on("mouseover", mouseover) // HINT: Pass in the mouseover and mouseout functions here
@@ -238,6 +243,21 @@ let svg_3 = d3.select("#graph3")
     .attr("height", graph_3_height)
     .append("g")
     .attr("transform", `translate(${margin.left-30},${margin.top})`);
+
+svg_3.append("line")
+    .attr("x1",78)
+    .attr("y1",margin.top-2)
+    .attr("x2",78)
+    .attr("y2",907)
+    .style("stroke","black")
+    .style("stroke-width",2)
+
+svg_3.append("text")
+        .attr("x", 40)
+        .attr("y", -10)    // HINT: Place this at the top middle edge of the graph
+        .style("text-anchor", "center")
+        .style("font-size", 25)
+        .text("Strongest World Cup Teams")
 
 categories = ['total','win_percent','margin','total_games','opp_str']
 
@@ -266,6 +286,7 @@ d3.csv("/data/ques_3.csv").then(function(data) {
 
     svg_3.append("g")
         .call(d3.axisLeft(y).tickSize(0).tickPadding(10))
+        .attr("transform", `translate(0,${-3.5})`);
 
     svg_3.append("g")
         .call(d3.axisTop(x).tickSize(0).tickPadding(10))
