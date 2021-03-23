@@ -4,9 +4,9 @@ const MAX_HEIGHT = 720;
 const margin = {top: 50, right: 100, bottom: 40, left: 100};
 
 // Assumes the same graph width, height dimensions as the example dashboard. Feel free to change these if you'd like
-let graph_1_width = (2*MAX_WIDTH / 3) - 10, graph_1_height = 500;
-let graph_2_width = (2*MAX_WIDTH / 3) - 10, graph_2_height = 500;
-let graph_3_width = MAX_WIDTH / 3.8, graph_3_height = 1000;
+let graph_1_width = (7.5*MAX_WIDTH / 12) - 10, graph_1_height = 500;
+let graph_2_width = (7.5*MAX_WIDTH / 12) - 10, graph_2_height = 500;
+let graph_3_width = MAX_WIDTH / 3.5, graph_3_height = 1000;
 
 let svg_1 = d3.select("#graph1")
     .append("svg")
@@ -16,7 +16,7 @@ let svg_1 = d3.select("#graph1")
     // .call(d3.zoom().on("zoom", function() {
     //     svg_1.attr("transform", d3.event.transform)
     // }))
-    .attr("transform", `translate(${margin.left},${margin.top})`);
+    .attr("transform", `translate(${margin.left+30},${margin.top})`);
 
 d3.csv("/data/football_clean_q1.csv").then(function(data) {
     let x_ax = d3.scaleBand()
@@ -70,7 +70,7 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
             .y(function(d) { return y_ax(parseInt(d.tournament))}))
 
     svg_1.append("text")
-            .attr("x", (graph_2_width/6))
+            .attr("x", (graph_2_width/6.8))
             .attr("y", -10)    // HINT: Place this at the top middle edge of the graph
             .style("text-anchor", "center")
             .style("font-size", 25)
@@ -102,8 +102,8 @@ let svg_2 = d3.select("#graph2")
     .append("svg")
     .attr("width", graph_2_width)     // HINT: width
     .attr("height", graph_2_height)     // HINT: height
-    .append("g")
-    .attr("transform", `translate(${0},${margin.top})`);
+    .append("g").
+    attr("transform", `translate(${margin.left-100},${margin.top})`);
 
 let tooltip = d3.select("#graph2")     // HINT: div id for div containing scatterplot
     .append("div")
@@ -115,7 +115,7 @@ let tooltip = d3.select("#graph2")     // HINT: div id for div containing scatte
 
 
 let title = svg_2.append("text")
-    .attr("x", (graph_2_width/4))
+    .attr("x", (graph_2_width/3.1))
     .attr("y", -10)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 25)
@@ -131,6 +131,27 @@ let legend_lower = svg_2.append("text")
     .attr("y", 445)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 15)
+
+let leg_disc = svg_2.append("text")
+    .attr("x", (margin.left + 85))
+    .attr("y", 340)    // HINT: Place this at the top middle edge of the graph
+    .style("text-anchor", "center")
+    .style("font-size", 15)
+    .text("Win")
+
+let leg_disc_2 = svg_2.append("text")
+    .attr("x", (margin.left + 85))
+    .attr("y", 360)    // HINT: Place this at the top middle edge of the graph
+    .style("text-anchor", "center")
+    .style("font-size", 15)
+    .text("Percentage")
+
+let lower_disc = svg_2.append("text")
+    .attr("x", (margin.left + (graph_1_width/2)-50))
+    .attr("y", 448)    // HINT: Place this at the top middle edge of the graph
+    .style("text-anchor", "center")
+    .style("font-size", 10)
+    .text("Note: some small countries may  not be visible.")
     
 
 function setData(val) {
@@ -188,15 +209,22 @@ function setData(val) {
             .attr("transform", `translate(${margin.left + 50},${250})`);
 
         let mouseover = function(d) {
-            let html = `<strong style="color: #cf6700;">${d.id}</strong><br><p style="color: #cf6700;">${d.total}% wins</p>`;       // HINT: Display the song here
-
+            let html = `<strong style="color: #cf6700;">${d.id}</strong><br><p style="color: #cf6700;">${d.total}% wins</p>`;  
+            
+            opac = 0
+            
+            if (d.total === undefined) {
+                opac = 0
+            } else {
+                opac = 0.9
+            }
             // Show the tooltip and set the position relative to the event X and Y location
             tooltip.html(html)
                 .style("left", `${(d3.event.pageX) - 20}px`)
                 .style("top", `${(d3.event.pageY) - 45}px`)
                 .transition()
                 .duration(200)
-                .style("opacity", 0.9)
+                .style("opacity", opac)
                 .style("background", color(d.total))
         };
 
@@ -242,15 +270,7 @@ let svg_3 = d3.select("#graph3")
     .attr("width", graph_3_width + 100)
     .attr("height", graph_3_height)
     .append("g")
-    .attr("transform", `translate(${margin.left-30},${margin.top})`);
-
-svg_3.append("line")
-    .attr("x1",78)
-    .attr("y1",margin.top-2)
-    .attr("x2",78)
-    .attr("y2",907)
-    .style("stroke","black")
-    .style("stroke-width",2)
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
 svg_3.append("text")
         .attr("x", 40)
@@ -259,19 +279,27 @@ svg_3.append("text")
         .style("font-size", 25)
         .text("Strongest World Cup Teams")
 
-categories = ['total','win_percent','margin','total_games','opp_str']
+let tooltip_3 = d3.select("#graph3")     // HINT: div id for div containing scatterplot
+    .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0)
+    .style("border", "solid")
+    .style("border-radius", "8px")
+    .style("border-width", "1.5px")
 
-d3.csv("/data/ques_3.csv").then(function(data) {
+categories = ['Total Score','Win Percent','Win Margin','Total Games','Opponent Win Pct']
+
+d3.csv("/data/ques_3_total.csv").then(function(data) {
 
     let y = d3.scaleBand()
         .domain(data.map(function(d) {return d.home_team}))
         .range([margin.top, graph_3_height - margin.top - margin.bottom])
-        .padding(0.1);
+        .padding(0);
 
     let x = d3.scaleBand()
         .domain(categories)
         .range([0, graph_3_width])
-        .padding(0.1)
+        .padding(0)
 
     var color = d3.scaleSequential(d3.interpolateYlGnBu).domain([0.5,1])
 
@@ -290,7 +318,40 @@ d3.csv("/data/ques_3.csv").then(function(data) {
 
     svg_3.append("g")
         .call(d3.axisTop(x).tickSize(0).tickPadding(10))
-        .attr("transform", `translate(0,${margin.top-3})`);
+        .attr("transform", `translate(0,${margin.top})`);
+
+    let mouseover_3 = function(d) {
+
+        let html = ``
+
+        if ((d.variable == 'Win Percent') || (d.variable == 'Opponent Win Pct')) {
+            html = `<strong style="color: #000000;">${d.home_team}</strong><br><p style="color: #000000;">${d.variable}: ${d.raw}%</p>`; 
+        } else {
+            html = `<strong style="color: #000000;">${d.home_team}</strong><br><p style="color: #000000;">${d.variable}: ${d.raw}</p>`; 
+        }
+
+        
+        
+
+        // Show the tooltip and set the position relative to the event X and Y location
+        tooltip_3.html(html)
+            .style("left", `${(d3.event.pageX) - graph_1_width - 100}px`)
+            .style("top", `${(d3.event.pageY) - 75}px`)
+            .transition()
+            .duration(200)
+            .style("opacity", 0.8)
+            .style("background", "ffffff")
+    };
+
+    // Mouseout function to hide the tool on exit
+    let mouseout_3 = function(d) {
+        // Set opacity back to 0 to hide
+        tooltip_3.transition()
+            .style("background", '#ffffff')
+            .duration(200)
+            .style("opacity", 0)
+
+    };
 
     svg_3.selectAll()
         .data(data)
@@ -300,13 +361,24 @@ d3.csv("/data/ques_3.csv").then(function(data) {
         .attr("width", x.bandwidth())
         .attr("height", y.bandwidth())
         .style("fill", function(d) {
-            if (d.variable == "win_percent") {return color_win_percent(d.value)} 
-            else if (d.variable == "total") {return color_total(d.value)}
-            else if (d.variable == "margin") {return color_margin(d.value)}
-            else if (d.variable == "total_games") {return color_total_games(d.value)}
-            else if (d.variable == "opp_str") {return color_opp_str(d.value)}
+            if (d.variable == "Win Percent") {return color_win_percent(d.value)} 
+            else if (d.variable == "Total Score") {return color_total(d.value)}
+            else if (d.variable == "Win Margin") {return color_margin(d.value)}
+            else if (d.variable == "Total Games") {return color_total_games(d.value)}
+            else if (d.variable == "Opponent Win Pct") {return color_opp_str(d.value)}
 
         })
+        .on("mouseover", mouseover_3) // HINT: Pass in the mouseover and mouseout functions here
+        .on("mouseout", mouseout_3);
+
+    svg_3.append("line")
+        .attr("x1",85)
+        .attr("y1",margin.top-2)
+        .attr("x2",85)
+        .attr("y2",920)
+        .style("stroke","white")
+        .style("stroke-width",8)
+
 })
 
 

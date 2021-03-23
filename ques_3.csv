@@ -1,0 +1,973 @@
+home_team,variable,value
+Albania,win_percent,0.417
+Algeria,win_percent,0.643
+Andorra,win_percent,0.583
+Argentina,win_percent,0.458
+Armenia,win_percent,0.308
+Australia,win_percent,0.526
+Austria,win_percent,0.615
+Azerbaijan,win_percent,0.333
+Belarus,win_percent,0.600
+Belgium,win_percent,0.542
+Bolivia,win_percent,0.615
+Bosnia and Herzegovina,win_percent,0.467
+Brazil,win_percent,0.444
+Bulgaria,win_percent,0.583
+Burkina Faso,win_percent,0.600
+Cameroon,win_percent,0.538
+Cape Verde,win_percent,0.625
+Chile,win_percent,0.706
+China PR,win_percent,0.600
+Colombia,win_percent,0.435
+Congo,win_percent,0.250
+Costa Rica,win_percent,0.423
+Croatia,win_percent,0.462
+Cyprus,win_percent,0.500
+Czech Republic,win_percent,0.231
+DR Congo,win_percent,0.375
+Denmark,win_percent,0.105
+Ecuador,win_percent,0.562
+Egypt,win_percent,0.692
+England,win_percent,0.455
+Estonia,win_percent,0.417
+Ethiopia,win_percent,0.667
+Faroe Islands,win_percent,0.538
+Finland,win_percent,0.333
+France,win_percent,0.560
+Gabon,win_percent,0.500
+Georgia,win_percent,0.300
+Germany,win_percent,0.500
+Ghana,win_percent,0.385
+Gibraltar,win_percent,0.500
+Greece,win_percent,0.450
+Guinea,win_percent,0.750
+Honduras,win_percent,0.478
+Hungary,win_percent,0.750
+Iceland,win_percent,0.471
+Iran,win_percent,0.357
+Iraq,win_percent,0.500
+Israel,win_percent,0.250
+Italy,win_percent,0.412
+Ivory Coast,win_percent,0.385
+Jamaica,win_percent,0.300
+Japan,win_percent,0.400
+Jordan,win_percent,0.429
+Kazakhstan,win_percent,0.500
+Kosovo,win_percent,0.333
+Latvia,win_percent,0.500
+Libya,win_percent,0.500
+Liechtenstein,win_percent,0.500
+Lithuania,win_percent,0.417
+Luxembourg,win_percent,0.500
+Mali,win_percent,0.250
+Malta,win_percent,0.385
+Mexico,win_percent,0.407
+Moldova,win_percent,0.500
+Montenegro,win_percent,0.333
+Morocco,win_percent,0.545
+Netherlands,win_percent,0.526
+New Zealand,win_percent,0.444
+Nigeria,win_percent,0.529
+North Macedonia,win_percent,0.417
+Northern Ireland,win_percent,0.429
+Norway,win_percent,0.500
+Panama,win_percent,0.524
+Paraguay,win_percent,0.308
+Peru,win_percent,0.500
+Poland,win_percent,0.438
+Portugal,win_percent,0.476
+Qatar,win_percent,0.625
+Republic of Ireland,win_percent,0.333
+Romania,win_percent,0.571
+Russia,win_percent,0.500
+San Marino,win_percent,0.500
+Saudi Arabia,win_percent,0.875
+Scotland,win_percent,0.417
+Senegal,win_percent,0.214
+Serbia,win_percent,0.467
+Slovakia,win_percent,0.417
+Slovenia,win_percent,0.667
+Solomon Islands,win_percent,0.500
+South Africa,win_percent,0.667
+South Korea,win_percent,0.467
+Spain,win_percent,0.278
+Sweden,win_percent,0.591
+Switzerland,win_percent,0.409
+Syria,win_percent,0.571
+Thailand,win_percent,0.400
+Trinidad and Tobago,win_percent,0.750
+Tunisia,win_percent,0.385
+Turkey,win_percent,0.333
+Uganda,win_percent,0.750
+Ukraine,win_percent,0.533
+United Arab Emirates,win_percent,0.600
+United States,win_percent,0.545
+Uruguay,win_percent,0.417
+Uzbekistan,win_percent,0.700
+Venezuela,win_percent,0.385
+Wales,win_percent,0.250
+Zambia,win_percent,0.500
+Albania,margin,-0.250
+Algeria,margin,0.286
+Andorra,margin,-2.167
+Argentina,margin,0.375
+Armenia,margin,-0.692
+Australia,margin,0.053
+Austria,margin,0.769
+Azerbaijan,margin,-0.583
+Belarus,margin,-1.500
+Belgium,margin,1.542
+Bolivia,margin,-0.923
+Bosnia and Herzegovina,margin,1.267
+Brazil,margin,0.722
+Bulgaria,margin,0.250
+Burkina Faso,margin,0.900
+Cameroon,margin,-0.154
+Cape Verde,margin,0.000
+Chile,margin,0.294
+China PR,margin,0.400
+Colombia,margin,0.826
+Congo,margin,-0.625
+Costa Rica,margin,0.231
+Croatia,margin,0.423
+Cyprus,margin,-0.917
+Czech Republic,margin,0.846
+DR Congo,margin,0.125
+Denmark,margin,1.158
+Ecuador,margin,-0.562
+Egypt,margin,-0.077
+England,margin,1.273
+Estonia,margin,-0.417
+Ethiopia,margin,-0.500
+Faroe Islands,margin,-1.846
+Finland,margin,-0.333
+France,margin,1.160
+Gabon,margin,-0.500
+Georgia,margin,-0.800
+Germany,margin,2.364
+Ghana,margin,1.154
+Gibraltar,margin,-4.833
+Greece,margin,0.250
+Guinea,margin,0.000
+Honduras,margin,-0.652
+Hungary,margin,-0.750
+Iceland,margin,0.294
+Iran,margin,0.500
+Iraq,margin,-0.250
+Israel,margin,-0.667
+Italy,margin,0.471
+Ivory Coast,margin,0.692
+Jamaica,margin,-0.800
+Japan,margin,0.133
+Jordan,margin,-1.000
+Kazakhstan,margin,-1.667
+Kosovo,margin,-1.667
+Latvia,margin,-1.000
+Libya,margin,0.000
+Liechtenstein,margin,-2.583
+Lithuania,margin,-0.833
+Luxembourg,margin,-1.917
+Mali,margin,-0.750
+Malta,margin,-2.385
+Mexico,margin,0.259
+Moldova,margin,-0.833
+Montenegro,margin,-0.500
+Morocco,margin,0.909
+Netherlands,margin,1.789
+New Zealand,margin,0.889
+Nigeria,margin,0.294
+North Macedonia,margin,-0.083
+Northern Ireland,margin,-0.143
+Norway,margin,-0.083
+Panama,margin,-0.714
+Paraguay,margin,-0.308
+Peru,margin,0.111
+Poland,margin,0.625
+Portugal,margin,1.048
+Qatar,margin,-1.250
+Republic of Ireland,margin,-0.133
+Romania,margin,0.071
+Russia,margin,0.714
+San Marino,margin,-5.833
+Saudi Arabia,margin,-0.250
+Scotland,margin,0.500
+Senegal,margin,0.429
+Serbia,margin,0.600
+Slovakia,margin,0.333
+Slovenia,margin,0.750
+Solomon Islands,margin,-1.167
+South Africa,margin,0.444
+South Korea,margin,-0.200
+Spain,margin,1.278
+Sweden,margin,0.773
+Switzerland,margin,0.727
+Syria,margin,0.143
+Thailand,margin,-1.800
+Trinidad and Tobago,margin,-1.000
+Tunisia,margin,0.154
+Turkey,margin,0.833
+Uganda,margin,-0.125
+Ukraine,margin,1.600
+United Arab Emirates,margin,-0.800
+United States,margin,0.682
+Uruguay,margin,0.333
+Uzbekistan,margin,0.100
+Venezuela,margin,-0.462
+Wales,margin,0.000
+Zambia,margin,0.625
+Albania,total_games,12.000
+Algeria,total_games,14.000
+Andorra,total_games,12.000
+Argentina,total_games,24.000
+Armenia,total_games,13.000
+Australia,total_games,19.000
+Austria,total_games,13.000
+Azerbaijan,total_games,12.000
+Belarus,total_games,10.000
+Belgium,total_games,24.000
+Bolivia,total_games,13.000
+Bosnia and Herzegovina,total_games,15.000
+Brazil,total_games,18.000
+Bulgaria,total_games,12.000
+Burkina Faso,total_games,10.000
+Cameroon,total_games,13.000
+Cape Verde,total_games,8.000
+Chile,total_games,17.000
+China PR,total_games,5.000
+Colombia,total_games,23.000
+Congo,total_games,8.000
+Costa Rica,total_games,26.000
+Croatia,total_games,26.000
+Cyprus,total_games,12.000
+Czech Republic,total_games,13.000
+DR Congo,total_games,8.000
+Denmark,total_games,19.000
+Ecuador,total_games,16.000
+Egypt,total_games,13.000
+England,total_games,22.000
+Estonia,total_games,12.000
+Ethiopia,total_games,6.000
+Faroe Islands,total_games,13.000
+Finland,total_games,12.000
+France,total_games,25.000
+Gabon,total_games,8.000
+Georgia,total_games,10.000
+Germany,total_games,22.000
+Ghana,total_games,13.000
+Gibraltar,total_games,6.000
+Greece,total_games,20.000
+Guinea,total_games,8.000
+Honduras,total_games,23.000
+Hungary,total_games,12.000
+Iceland,total_games,17.000
+Iran,total_games,14.000
+Iraq,total_games,8.000
+Israel,total_games,12.000
+Italy,total_games,17.000
+Ivory Coast,total_games,13.000
+Jamaica,total_games,10.000
+Japan,total_games,15.000
+Jordan,total_games,7.000
+Kazakhstan,total_games,12.000
+Kosovo,total_games,6.000
+Latvia,total_games,12.000
+Libya,total_games,8.000
+Liechtenstein,total_games,12.000
+Lithuania,total_games,12.000
+Luxembourg,total_games,12.000
+Mali,total_games,8.000
+Malta,total_games,13.000
+Mexico,total_games,27.000
+Moldova,total_games,12.000
+Montenegro,total_games,12.000
+Morocco,total_games,11.000
+Netherlands,total_games,19.000
+New Zealand,total_games,9.000
+Nigeria,total_games,17.000
+North Macedonia,total_games,12.000
+Northern Ireland,total_games,14.000
+Norway,total_games,12.000
+Panama,total_games,21.000
+Paraguay,total_games,13.000
+Peru,total_games,18.000
+Poland,total_games,16.000
+Portugal,total_games,21.000
+Qatar,total_games,8.000
+Republic of Ireland,total_games,15.000
+Romania,total_games,14.000
+Russia,total_games,14.000
+San Marino,total_games,12.000
+Saudi Arabia,total_games,8.000
+Scotland,total_games,12.000
+Senegal,total_games,14.000
+Serbia,total_games,15.000
+Slovakia,total_games,12.000
+Slovenia,total_games,12.000
+Solomon Islands,total_games,6.000
+South Africa,total_games,9.000
+South Korea,total_games,15.000
+Spain,total_games,18.000
+Sweden,total_games,22.000
+Switzerland,total_games,22.000
+Syria,total_games,7.000
+Thailand,total_games,5.000
+Trinidad and Tobago,total_games,8.000
+Tunisia,total_games,13.000
+Turkey,total_games,12.000
+Uganda,total_games,8.000
+Ukraine,total_games,15.000
+United Arab Emirates,total_games,5.000
+United States,total_games,22.000
+Uruguay,total_games,24.000
+Uzbekistan,total_games,10.000
+Venezuela,total_games,13.000
+Wales,total_games,12.000
+Zambia,total_games,8.000
+Albania,opp_str,0.443
+Algeria,opp_str,0.484
+Andorra,opp_str,0.512
+Argentina,opp_str,0.490
+Armenia,opp_str,0.346
+Australia,opp_str,0.502
+Austria,opp_str,0.444
+Azerbaijan,opp_str,0.443
+Belarus,opp_str,0.486
+Belgium,opp_str,0.460
+Bolivia,opp_str,0.486
+Bosnia and Herzegovina,opp_str,0.464
+Brazil,opp_str,0.493
+Bulgaria,opp_str,0.427
+Burkina Faso,opp_str,0.476
+Cameroon,opp_str,0.512
+Cape Verde,opp_str,0.535
+Chile,opp_str,0.457
+China PR,opp_str,0.544
+Colombia,opp_str,0.451
+Congo,opp_str,0.539
+Costa Rica,opp_str,0.469
+Croatia,opp_str,0.439
+Cyprus,opp_str,0.472
+Czech Republic,opp_str,0.406
+DR Congo,opp_str,0.538
+Denmark,opp_str,0.423
+Ecuador,opp_str,0.484
+Egypt,opp_str,0.515
+England,opp_str,0.458
+Estonia,opp_str,0.521
+Ethiopia,opp_str,0.704
+Faroe Islands,opp_str,0.535
+Finland,opp_str,0.423
+France,opp_str,0.467
+Gabon,opp_str,0.396
+Georgia,opp_str,0.436
+Germany,opp_str,0.472
+Ghana,opp_str,0.469
+Gibraltar,opp_str,0.474
+Greece,opp_str,0.474
+Guinea,opp_str,0.431
+Honduras,opp_str,0.479
+Hungary,opp_str,0.499
+Iceland,opp_str,0.462
+Iran,opp_str,0.534
+Iraq,opp_str,0.549
+Israel,opp_str,0.412
+Italy,opp_str,0.388
+Ivory Coast,opp_str,0.485
+Jamaica,opp_str,0.476
+Japan,opp_str,0.484
+Jordan,opp_str,0.547
+Kazakhstan,opp_str,0.422
+Kosovo,opp_str,0.434
+Latvia,opp_str,0.486
+Libya,opp_str,0.537
+Liechtenstein,opp_str,0.407
+Lithuania,opp_str,0.469
+Luxembourg,opp_str,0.499
+Mali,opp_str,0.452
+Malta,opp_str,0.393
+Mexico,opp_str,0.494
+Moldova,opp_str,0.431
+Montenegro,opp_str,0.437
+Morocco,opp_str,0.466
+Netherlands,opp_str,0.512
+New Zealand,opp_str,0.517
+Nigeria,opp_str,0.458
+North Macedonia,opp_str,0.402
+Northern Ireland,opp_str,0.407
+Norway,opp_str,0.442
+Panama,opp_str,0.477
+Paraguay,opp_str,0.502
+Peru,opp_str,0.474
+Poland,opp_str,0.410
+Portugal,opp_str,0.476
+Qatar,opp_str,0.527
+Republic of Ireland,opp_str,0.436
+Romania,opp_str,0.432
+Russia,opp_str,0.490
+San Marino,opp_str,0.427
+Saudi Arabia,opp_str,0.504
+Scotland,opp_str,0.467
+Senegal,opp_str,0.550
+Serbia,opp_str,0.408
+Slovakia,opp_str,0.460
+Slovenia,opp_str,0.439
+Solomon Islands,opp_str,0.444
+South Africa,opp_str,0.549
+South Korea,opp_str,0.559
+Spain,opp_str,0.445
+Sweden,opp_str,0.492
+Switzerland,opp_str,0.511
+Syria,opp_str,0.543
+Thailand,opp_str,0.580
+Trinidad and Tobago,opp_str,0.482
+Tunisia,opp_str,0.556
+Turkey,opp_str,0.491
+Uganda,opp_str,0.529
+Ukraine,opp_str,0.445
+United Arab Emirates,opp_str,0.540
+United States,opp_str,0.477
+Uruguay,opp_str,0.490
+Uzbekistan,opp_str,0.524
+Venezuela,opp_str,0.482
+Wales,opp_str,0.439
+Zambia,opp_str,0.436
+Albania,win_percent_norm,0.476
+Algeria,win_percent_norm,0.735
+Andorra,win_percent_norm,0.667
+Argentina,win_percent_norm,0.524
+Armenia,win_percent_norm,0.352
+Australia,win_percent_norm,0.602
+Austria,win_percent_norm,0.703
+Azerbaijan,win_percent_norm,0.381
+Belarus,win_percent_norm,0.686
+Belgium,win_percent_norm,0.619
+Bolivia,win_percent_norm,0.703
+Bosnia and Herzegovina,win_percent_norm,0.533
+Brazil,win_percent_norm,0.508
+Bulgaria,win_percent_norm,0.667
+Burkina Faso,win_percent_norm,0.686
+Cameroon,win_percent_norm,0.615
+Cape Verde,win_percent_norm,0.714
+Chile,win_percent_norm,0.807
+China PR,win_percent_norm,0.686
+Colombia,win_percent_norm,0.497
+Congo,win_percent_norm,0.286
+Costa Rica,win_percent_norm,0.484
+Croatia,win_percent_norm,0.527
+Cyprus,win_percent_norm,0.571
+Czech Republic,win_percent_norm,0.264
+DR Congo,win_percent_norm,0.429
+Denmark,win_percent_norm,0.120
+Ecuador,win_percent_norm,0.643
+Egypt,win_percent_norm,0.791
+England,win_percent_norm,0.519
+Estonia,win_percent_norm,0.476
+Ethiopia,win_percent_norm,0.762
+Faroe Islands,win_percent_norm,0.615
+Finland,win_percent_norm,0.381
+France,win_percent_norm,0.640
+Gabon,win_percent_norm,0.571
+Georgia,win_percent_norm,0.343
+Germany,win_percent_norm,0.571
+Ghana,win_percent_norm,0.440
+Gibraltar,win_percent_norm,0.571
+Greece,win_percent_norm,0.514
+Guinea,win_percent_norm,0.857
+Honduras,win_percent_norm,0.547
+Hungary,win_percent_norm,0.857
+Iceland,win_percent_norm,0.538
+Iran,win_percent_norm,0.408
+Iraq,win_percent_norm,0.571
+Israel,win_percent_norm,0.286
+Italy,win_percent_norm,0.471
+Ivory Coast,win_percent_norm,0.440
+Jamaica,win_percent_norm,0.343
+Japan,win_percent_norm,0.457
+Jordan,win_percent_norm,0.490
+Kazakhstan,win_percent_norm,0.571
+Kosovo,win_percent_norm,0.381
+Latvia,win_percent_norm,0.571
+Libya,win_percent_norm,0.571
+Liechtenstein,win_percent_norm,0.571
+Lithuania,win_percent_norm,0.476
+Luxembourg,win_percent_norm,0.571
+Mali,win_percent_norm,0.286
+Malta,win_percent_norm,0.440
+Mexico,win_percent_norm,0.466
+Moldova,win_percent_norm,0.571
+Montenegro,win_percent_norm,0.381
+Morocco,win_percent_norm,0.623
+Netherlands,win_percent_norm,0.602
+New Zealand,win_percent_norm,0.508
+Nigeria,win_percent_norm,0.605
+North Macedonia,win_percent_norm,0.476
+Northern Ireland,win_percent_norm,0.490
+Norway,win_percent_norm,0.571
+Panama,win_percent_norm,0.599
+Paraguay,win_percent_norm,0.352
+Peru,win_percent_norm,0.571
+Poland,win_percent_norm,0.500
+Portugal,win_percent_norm,0.544
+Qatar,win_percent_norm,0.714
+Republic of Ireland,win_percent_norm,0.381
+Romania,win_percent_norm,0.653
+Russia,win_percent_norm,0.571
+San Marino,win_percent_norm,0.571
+Saudi Arabia,win_percent_norm,1.000
+Scotland,win_percent_norm,0.476
+Senegal,win_percent_norm,0.245
+Serbia,win_percent_norm,0.533
+Slovakia,win_percent_norm,0.476
+Slovenia,win_percent_norm,0.762
+Solomon Islands,win_percent_norm,0.571
+South Africa,win_percent_norm,0.762
+South Korea,win_percent_norm,0.533
+Spain,win_percent_norm,0.317
+Sweden,win_percent_norm,0.675
+Switzerland,win_percent_norm,0.468
+Syria,win_percent_norm,0.653
+Thailand,win_percent_norm,0.457
+Trinidad and Tobago,win_percent_norm,0.857
+Tunisia,win_percent_norm,0.440
+Turkey,win_percent_norm,0.381
+Uganda,win_percent_norm,0.857
+Ukraine,win_percent_norm,0.610
+United Arab Emirates,win_percent_norm,0.686
+United States,win_percent_norm,0.623
+Uruguay,win_percent_norm,0.476
+Uzbekistan,win_percent_norm,0.800
+Venezuela,win_percent_norm,0.440
+Wales,win_percent_norm,0.286
+Zambia,win_percent_norm,0.571
+Albania,margin_norm,0.681
+Algeria,margin_norm,0.747
+Andorra,margin_norm,0.447
+Argentina,margin_norm,0.757
+Armenia,margin_norm,0.627
+Australia,margin_norm,0.718
+Austria,margin_norm,0.805
+Azerbaijan,margin_norm,0.640
+Belarus,margin_norm,0.529
+Belgium,margin_norm,0.900
+Bolivia,margin_norm,0.599
+Bosnia and Herzegovina,margin_norm,0.866
+Brazil,margin_norm,0.800
+Bulgaria,margin_norm,0.742
+Burkina Faso,margin_norm,0.821
+Cameroon,margin_norm,0.693
+Cape Verde,margin_norm,0.712
+Chile,margin_norm,0.748
+China PR,margin_norm,0.760
+Colombia,margin_norm,0.812
+Congo,margin_norm,0.635
+Costa Rica,margin_norm,0.740
+Croatia,margin_norm,0.763
+Cyprus,margin_norm,0.600
+Czech Republic,margin_norm,0.815
+DR Congo,margin_norm,0.727
+Denmark,margin_norm,0.853
+Ecuador,margin_norm,0.643
+Egypt,margin_norm,0.702
+England,margin_norm,0.867
+Estonia,margin_norm,0.661
+Ethiopia,margin_norm,0.651
+Faroe Islands,margin_norm,0.486
+Finland,margin_norm,0.671
+France,margin_norm,0.853
+Gabon,margin_norm,0.651
+Georgia,margin_norm,0.614
+Germany,margin_norm,1.000
+Ghana,margin_norm,0.852
+Gibraltar,margin_norm,0.122
+Greece,margin_norm,0.742
+Guinea,margin_norm,0.712
+Honduras,margin_norm,0.632
+Hungary,margin_norm,0.620
+Iceland,margin_norm,0.748
+Iran,margin_norm,0.773
+Iraq,margin_norm,0.681
+Israel,margin_norm,0.630
+Italy,margin_norm,0.769
+Ivory Coast,margin_norm,0.796
+Jamaica,margin_norm,0.614
+Japan,margin_norm,0.728
+Jordan,margin_norm,0.590
+Kazakhstan,margin_norm,0.508
+Kosovo,margin_norm,0.508
+Latvia,margin_norm,0.590
+Libya,margin_norm,0.712
+Liechtenstein,margin_norm,0.396
+Lithuania,margin_norm,0.610
+Luxembourg,margin_norm,0.478
+Mali,margin_norm,0.620
+Malta,margin_norm,0.421
+Mexico,margin_norm,0.743
+Moldova,margin_norm,0.610
+Montenegro,margin_norm,0.651
+Morocco,margin_norm,0.823
+Netherlands,margin_norm,0.930
+New Zealand,margin_norm,0.820
+Nigeria,margin_norm,0.748
+North Macedonia,margin_norm,0.701
+Northern Ireland,margin_norm,0.694
+Norway,margin_norm,0.701
+Panama,margin_norm,0.625
+Paraguay,margin_norm,0.674
+Peru,margin_norm,0.725
+Poland,margin_norm,0.788
+Portugal,margin_norm,0.839
+Qatar,margin_norm,0.559
+Republic of Ireland,margin_norm,0.695
+Romania,margin_norm,0.720
+Russia,margin_norm,0.799
+San Marino,margin_norm,0.000
+Saudi Arabia,margin_norm,0.681
+Scotland,margin_norm,0.773
+Senegal,margin_norm,0.764
+Serbia,margin_norm,0.785
+Slovakia,margin_norm,0.752
+Slovenia,margin_norm,0.803
+Solomon Islands,margin_norm,0.569
+South Africa,margin_norm,0.766
+South Korea,margin_norm,0.687
+Spain,margin_norm,0.868
+Sweden,margin_norm,0.806
+Switzerland,margin_norm,0.800
+Syria,margin_norm,0.729
+Thailand,margin_norm,0.492
+Trinidad and Tobago,margin_norm,0.590
+Tunisia,margin_norm,0.730
+Turkey,margin_norm,0.813
+Uganda,margin_norm,0.696
+Ukraine,margin_norm,0.907
+United Arab Emirates,margin_norm,0.614
+United States,margin_norm,0.795
+Uruguay,margin_norm,0.752
+Uzbekistan,margin_norm,0.724
+Venezuela,margin_norm,0.655
+Wales,margin_norm,0.712
+Zambia,margin_norm,0.788
+Albania,total_games_norm,0.444
+Algeria,total_games_norm,0.519
+Andorra,total_games_norm,0.444
+Argentina,total_games_norm,0.889
+Armenia,total_games_norm,0.481
+Australia,total_games_norm,0.704
+Austria,total_games_norm,0.481
+Azerbaijan,total_games_norm,0.444
+Belarus,total_games_norm,0.370
+Belgium,total_games_norm,0.889
+Bolivia,total_games_norm,0.481
+Bosnia and Herzegovina,total_games_norm,0.556
+Brazil,total_games_norm,0.667
+Bulgaria,total_games_norm,0.444
+Burkina Faso,total_games_norm,0.370
+Cameroon,total_games_norm,0.481
+Cape Verde,total_games_norm,0.296
+Chile,total_games_norm,0.630
+China PR,total_games_norm,0.185
+Colombia,total_games_norm,0.852
+Congo,total_games_norm,0.296
+Costa Rica,total_games_norm,0.963
+Croatia,total_games_norm,0.963
+Cyprus,total_games_norm,0.444
+Czech Republic,total_games_norm,0.481
+DR Congo,total_games_norm,0.296
+Denmark,total_games_norm,0.704
+Ecuador,total_games_norm,0.593
+Egypt,total_games_norm,0.481
+England,total_games_norm,0.815
+Estonia,total_games_norm,0.444
+Ethiopia,total_games_norm,0.222
+Faroe Islands,total_games_norm,0.481
+Finland,total_games_norm,0.444
+France,total_games_norm,0.926
+Gabon,total_games_norm,0.296
+Georgia,total_games_norm,0.370
+Germany,total_games_norm,0.815
+Ghana,total_games_norm,0.481
+Gibraltar,total_games_norm,0.222
+Greece,total_games_norm,0.741
+Guinea,total_games_norm,0.296
+Honduras,total_games_norm,0.852
+Hungary,total_games_norm,0.444
+Iceland,total_games_norm,0.630
+Iran,total_games_norm,0.519
+Iraq,total_games_norm,0.296
+Israel,total_games_norm,0.444
+Italy,total_games_norm,0.630
+Ivory Coast,total_games_norm,0.481
+Jamaica,total_games_norm,0.370
+Japan,total_games_norm,0.556
+Jordan,total_games_norm,0.259
+Kazakhstan,total_games_norm,0.444
+Kosovo,total_games_norm,0.222
+Latvia,total_games_norm,0.444
+Libya,total_games_norm,0.296
+Liechtenstein,total_games_norm,0.444
+Lithuania,total_games_norm,0.444
+Luxembourg,total_games_norm,0.444
+Mali,total_games_norm,0.296
+Malta,total_games_norm,0.481
+Mexico,total_games_norm,1.000
+Moldova,total_games_norm,0.444
+Montenegro,total_games_norm,0.444
+Morocco,total_games_norm,0.407
+Netherlands,total_games_norm,0.704
+New Zealand,total_games_norm,0.333
+Nigeria,total_games_norm,0.630
+North Macedonia,total_games_norm,0.444
+Northern Ireland,total_games_norm,0.519
+Norway,total_games_norm,0.444
+Panama,total_games_norm,0.778
+Paraguay,total_games_norm,0.481
+Peru,total_games_norm,0.667
+Poland,total_games_norm,0.593
+Portugal,total_games_norm,0.778
+Qatar,total_games_norm,0.296
+Republic of Ireland,total_games_norm,0.556
+Romania,total_games_norm,0.519
+Russia,total_games_norm,0.519
+San Marino,total_games_norm,0.444
+Saudi Arabia,total_games_norm,0.296
+Scotland,total_games_norm,0.444
+Senegal,total_games_norm,0.519
+Serbia,total_games_norm,0.556
+Slovakia,total_games_norm,0.444
+Slovenia,total_games_norm,0.444
+Solomon Islands,total_games_norm,0.222
+South Africa,total_games_norm,0.333
+South Korea,total_games_norm,0.556
+Spain,total_games_norm,0.667
+Sweden,total_games_norm,0.815
+Switzerland,total_games_norm,0.815
+Syria,total_games_norm,0.259
+Thailand,total_games_norm,0.185
+Trinidad and Tobago,total_games_norm,0.296
+Tunisia,total_games_norm,0.481
+Turkey,total_games_norm,0.444
+Uganda,total_games_norm,0.296
+Ukraine,total_games_norm,0.556
+United Arab Emirates,total_games_norm,0.185
+United States,total_games_norm,0.815
+Uruguay,total_games_norm,0.889
+Uzbekistan,total_games_norm,0.370
+Venezuela,total_games_norm,0.481
+Wales,total_games_norm,0.444
+Zambia,total_games_norm,0.296
+Albania,opp_str_norm,0.629
+Algeria,opp_str_norm,0.687
+Andorra,opp_str_norm,0.727
+Argentina,opp_str_norm,0.696
+Armenia,opp_str_norm,0.491
+Australia,opp_str_norm,0.713
+Austria,opp_str_norm,0.631
+Azerbaijan,opp_str_norm,0.629
+Belarus,opp_str_norm,0.690
+Belgium,opp_str_norm,0.654
+Bolivia,opp_str_norm,0.690
+Bosnia and Herzegovina,opp_str_norm,0.658
+Brazil,opp_str_norm,0.699
+Bulgaria,opp_str_norm,0.607
+Burkina Faso,opp_str_norm,0.675
+Cameroon,opp_str_norm,0.727
+Cape Verde,opp_str_norm,0.760
+Chile,opp_str_norm,0.649
+China PR,opp_str_norm,0.773
+Colombia,opp_str_norm,0.640
+Congo,opp_str_norm,0.765
+Costa Rica,opp_str_norm,0.666
+Croatia,opp_str_norm,0.623
+Cyprus,opp_str_norm,0.670
+Czech Republic,opp_str_norm,0.576
+DR Congo,opp_str_norm,0.765
+Denmark,opp_str_norm,0.601
+Ecuador,opp_str_norm,0.687
+Egypt,opp_str_norm,0.731
+England,opp_str_norm,0.651
+Estonia,opp_str_norm,0.739
+Ethiopia,opp_str_norm,1.000
+Faroe Islands,opp_str_norm,0.760
+Finland,opp_str_norm,0.601
+France,opp_str_norm,0.663
+Gabon,opp_str_norm,0.562
+Georgia,opp_str_norm,0.620
+Germany,opp_str_norm,0.670
+Ghana,opp_str_norm,0.666
+Gibraltar,opp_str_norm,0.673
+Greece,opp_str_norm,0.673
+Guinea,opp_str_norm,0.613
+Honduras,opp_str_norm,0.680
+Hungary,opp_str_norm,0.708
+Iceland,opp_str_norm,0.656
+Iran,opp_str_norm,0.758
+Iraq,opp_str_norm,0.780
+Israel,opp_str_norm,0.585
+Italy,opp_str_norm,0.551
+Ivory Coast,opp_str_norm,0.689
+Jamaica,opp_str_norm,0.675
+Japan,opp_str_norm,0.687
+Jordan,opp_str_norm,0.776
+Kazakhstan,opp_str_norm,0.599
+Kosovo,opp_str_norm,0.616
+Latvia,opp_str_norm,0.690
+Libya,opp_str_norm,0.763
+Liechtenstein,opp_str_norm,0.579
+Lithuania,opp_str_norm,0.666
+Luxembourg,opp_str_norm,0.709
+Mali,opp_str_norm,0.642
+Malta,opp_str_norm,0.559
+Mexico,opp_str_norm,0.701
+Moldova,opp_str_norm,0.612
+Montenegro,opp_str_norm,0.620
+Morocco,opp_str_norm,0.662
+Netherlands,opp_str_norm,0.727
+New Zealand,opp_str_norm,0.735
+Nigeria,opp_str_norm,0.650
+North Macedonia,opp_str_norm,0.571
+Northern Ireland,opp_str_norm,0.577
+Norway,opp_str_norm,0.627
+Panama,opp_str_norm,0.677
+Paraguay,opp_str_norm,0.713
+Peru,opp_str_norm,0.673
+Poland,opp_str_norm,0.582
+Portugal,opp_str_norm,0.676
+Qatar,opp_str_norm,0.749
+Republic of Ireland,opp_str_norm,0.619
+Romania,opp_str_norm,0.613
+Russia,opp_str_norm,0.696
+San Marino,opp_str_norm,0.606
+Saudi Arabia,opp_str_norm,0.716
+Scotland,opp_str_norm,0.663
+Senegal,opp_str_norm,0.781
+Serbia,opp_str_norm,0.580
+Slovakia,opp_str_norm,0.654
+Slovenia,opp_str_norm,0.624
+Solomon Islands,opp_str_norm,0.631
+South Africa,opp_str_norm,0.780
+South Korea,opp_str_norm,0.794
+Spain,opp_str_norm,0.632
+Sweden,opp_str_norm,0.698
+Switzerland,opp_str_norm,0.726
+Syria,opp_str_norm,0.771
+Thailand,opp_str_norm,0.824
+Trinidad and Tobago,opp_str_norm,0.684
+Tunisia,opp_str_norm,0.789
+Turkey,opp_str_norm,0.698
+Uganda,opp_str_norm,0.751
+Ukraine,opp_str_norm,0.632
+United Arab Emirates,opp_str_norm,0.767
+United States,opp_str_norm,0.678
+Uruguay,opp_str_norm,0.695
+Uzbekistan,opp_str_norm,0.743
+Venezuela,opp_str_norm,0.684
+Wales,opp_str_norm,0.623
+Zambia,opp_str_norm,0.619
+Albania,total_norm,0.558
+Algeria,total_norm,0.672
+Andorra,total_norm,0.571
+Argentina,total_norm,0.716
+Armenia,total_norm,0.488
+Australia,total_norm,0.684
+Austria,total_norm,0.655
+Azerbaijan,total_norm,0.524
+Belarus,total_norm,0.569
+Belgium,total_norm,0.765
+Bolivia,total_norm,0.618
+Bosnia and Herzegovina,total_norm,0.653
+Brazil,total_norm,0.668
+Bulgaria,total_norm,0.615
+Burkina Faso,total_norm,0.638
+Cameroon,total_norm,0.629
+Cape Verde,total_norm,0.621
+Chile,total_norm,0.708
+China PR,total_norm,0.601
+Colombia,total_norm,0.700
+Congo,total_norm,0.496
+Costa Rica,total_norm,0.713
+Croatia,total_norm,0.719
+Cyprus,total_norm,0.571
+Czech Republic,total_norm,0.534
+DR Congo,total_norm,0.554
+Denmark,total_norm,0.570
+Ecuador,total_norm,0.641
+Egypt,total_norm,0.677
+England,total_norm,0.713
+Estonia,total_norm,0.580
+Ethiopia,total_norm,0.659
+Faroe Islands,total_norm,0.586
+Finland,total_norm,0.524
+France,total_norm,0.770
+Gabon,total_norm,0.520
+Georgia,total_norm,0.487
+Germany,total_norm,0.764
+Ghana,total_norm,0.610
+Gibraltar,total_norm,0.397
+Greece,total_norm,0.667
+Guinea,total_norm,0.619
+Honduras,total_norm,0.678
+Hungary,total_norm,0.658
+Iceland,total_norm,0.643
+Iran,total_norm,0.614
+Iraq,total_norm,0.582
+Israel,total_norm,0.486
+Italy,total_norm,0.605
+Ivory Coast,total_norm,0.601
+Jamaica,total_norm,0.501
+Japan,total_norm,0.607
+Jordan,total_norm,0.529
+Kazakhstan,total_norm,0.531
+Kosovo,total_norm,0.432
+Latvia,total_norm,0.574
+Libya,total_norm,0.586
+Liechtenstein,total_norm,0.498
+Lithuania,total_norm,0.549
+Luxembourg,total_norm,0.551
+Mali,total_norm,0.461
+Malta,total_norm,0.475
+Mexico,total_norm,0.727
+Moldova,total_norm,0.559
+Montenegro,total_norm,0.524
+Morocco,total_norm,0.629
+Netherlands,total_norm,0.741
+New Zealand,total_norm,0.599
+Nigeria,total_norm,0.658
+North Macedonia,total_norm,0.548
+Northern Ireland,total_norm,0.570
+Norway,total_norm,0.586
+Panama,total_norm,0.669
+Paraguay,total_norm,0.555
+Peru,total_norm,0.659
+Poland,total_norm,0.616
+Portugal,total_norm,0.709
+Qatar,total_norm,0.580
+Republic of Ireland,total_norm,0.563
+Romania,total_norm,0.626
+Russia,total_norm,0.646
+San Marino,total_norm,0.405
+Saudi Arabia,total_norm,0.673
+Scotland,total_norm,0.589
+Senegal,total_norm,0.577
+Serbia,total_norm,0.613
+Slovakia,total_norm,0.582
+Slovenia,total_norm,0.658
+Solomon Islands,total_norm,0.499
+South Africa,total_norm,0.660
+South Korea,total_norm,0.642
+Spain,total_norm,0.621
+Sweden,total_norm,0.749
+Switzerland,total_norm,0.702
+Syria,total_norm,0.603
+Thailand,total_norm,0.490
+Trinidad and Tobago,total_norm,0.607
+Tunisia,total_norm,0.610
+Turkey,total_norm,0.584
+Uganda,total_norm,0.650
+Ukraine,total_norm,0.676
+United Arab Emirates,total_norm,0.563
+United States,total_norm,0.728
+Uruguay,total_norm,0.703
+Uzbekistan,total_norm,0.659
+Venezuela,total_norm,0.565
+Wales,total_norm,0.516
+Zambia,total_norm,0.569

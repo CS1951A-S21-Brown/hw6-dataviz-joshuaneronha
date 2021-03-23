@@ -21,7 +21,7 @@
     </div>
     <!--  We included a basic HTML structure for the 3 graphs here. Feel free to change this if you'd like  -->
     <div class="row">
-        <div class="col-lg-8">
+        <div class="col-lg-7">
             <div id="graph1"></div>
             <div id="graph2"></div><br/>
             <div>
@@ -30,11 +30,90 @@
             </div>
 
             <input id="slider_line" type="range" min="1" max="125" value="10" class="slider" id="myRange" onchange="setData(this.value)">
-
+            <br><p style="position:absolute; left:300px">Drag the slider to change the number of countries shown!</p>
+            <br><p></p>
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-5">
             <div id="graph3"></div>
         </div>
+    </div>
+    <div style="position:absolute; left:200px; right:200px">
+    <br>
+    <h3>Written Questions</h3><br>
+    <ol>
+        <li>My dashboard considers the football dataset and answers each question using a different form of graph. 
+            The first question asks about the number of games played per year, and I decided to create a line graph
+            that shows the number of games per year since the mid-nineteenth century til present. It very clearly
+            shows the trends over time very clearly; in addition to a standard line, I also filled in the area
+            under the line with a gradient matching the color scheme and meaning of the other graphs. While
+            this information is also shown on the axis, it makes the graph more aesthetic and consistent with
+            the other graphs based on the shared color scheme. I also decided to show all years possible
+            in order to maximize the amount of information clearly shown. In my second graph, I showed the
+            winning percentages of the top nations using a map! While this took quite a bit of time to build,
+            there, of course, is no better way of displaying geographic data. This is a chloropleth map, which
+            means that the color directly corresponds to the win percentage (darker is a higher win percent.
+            While the question wanted to see this information for ten countries, I built in an interactive
+            element that allows the user to visualize up to 125 countries (only countries over a certain
+            threshold of games were included) with a dynamic color scale. The tooltip also shows the exact
+            country and win percentage! The only disadvantage is that very geographically small countries
+            do not show up on the map (so while there are supposed to be ten countries at the default map,
+            only seven are actually visible -- Jersey, for example, is a small island that is not visible!). 
+            My third graph looked at data exclusively from the 2013/2014 and 2017/2018 World Cup and World Cup
+            Qualifying Teams, and for each team during that period, calculated the percentage of games they won,
+            the average win margin, the total number of games they played, and the average win percentage of their
+            opponent. I took the top twenty and normalized their values (i.e. so the max in each set would be 1 and
+            the min 0) then summed them up into a "total score". I displayed this data in a heat map! The first column
+            on the left, separated by the line, shows the top countries ranked in descending order by their total score,
+            then each category on the right shows how each country does in each category. Since these color scales were
+            normalized, I also built a tooltip to actually show each value. I think the heat map was a great choice of graph
+            for this question because it allows for easy comparison of different statistics between countries. This combination
+            of factors and the sum help to show which countries might be most likely to win in 2022
+            </li>
+        <li>First, D3 was helpful because of its support for all sorts of different graphs -- while I could make a line
+            plot easily in MatPlotLib or Excel, making a map or heat map might have been much harder. As a result, using D3
+            allowed me to access and create a greater variety of graphs rather than boring bar/line/scatter plots. Another
+            part of D3 that was great was the interactive component -- this, of course, is not easily done with typical
+            graphing programs. The relative ease of adding tooltips and interactive elements is powerful and flexible -- I was
+            shocked how easily I was able to implement a slider, despite relative inexperience with HTML/JS/CSS. These interactive
+            elements make the graphs so much better and more useful. In the past, I have used Tableau extensively using the student
+            license, but it is wildly expensive. Now, I can basically create anything I might have made in Tableau with D3 completely
+            open-source, which is pretty darn cool. A final reason that D3 improved my plots were its flexibility! Because it is code
+            based, you can literally do whatever you want which lets you tweak the graph until it is perfect. For example, I was able to
+            disable the tooltip for countries not showing data, and using a conditional block I was able to show a percent sign in the
+            tooltip in Graph 3 for some columns but not others. One issue I have had using Tableau is its lack of flexibility, and D3
+            solves this -- I will definitely use D3 instead of Tableau in the future if given the opportunity!
+            </li>
+        <li>One issue D3 can be less than ideal is that working with constraints / sizing can be tough -- because some of my values are
+            hard-coded in the SVG blocks, I'm concerned it might not show up well on other display sizes or mobile devices. Another reason
+            not to use D3 is that while it is very flexible, this also makes it very time-consuming to build -- I could build a comparable
+            plot in Tableau for the map in about ten minutes, which I suppose is the price you pay for open-source software and flexibility!
+            Finally, it requires more complicated infastructure; you can't just paste an image on your website, you need to properly
+            set it up on a web server which may not be useful for some contexts, potentially this one. But these are relatively small things,
+            as overall I have found D3 to be really cool!
+
+            </li>
+        <br>
+        <h3>Accessible Data Visualization</h3>
+        <li>There are both accessible and inaccessible parts of the dashboard. The Betterment.com article suggests making sure that all visualizations
+            are within SVG format, as this allows visually impaired people using screen readers to read the text within the chart, which I have done in 
+            all three of my graphs. I also worked to maximize contrast wherever possible, also as suggested by the Betterment article. Also, I did not
+            include sound or animations that might unnecesarily inhibit the experiences of deaf people or people with epilepsy as described in the Medium
+            article. However, my visualization still might pose issues for people with visual disabilities. People with tritanomaly/tritanopia color
+            blindness might not be able to tell apart blue and green in the legend; I could look at and consider using different color scales to rectify 
+            this. I did not summarize my graphs anywhere, in an "alt" statement or elsewhere for people who cannot actually see the graph; this would be an
+            easy addition using an "alt" statement. Finally, I did not publish the underlying CSV, which people who cannot see the graph might want to looke
+            at so they can understand the underlying numbers too (of course it's in the directory, but I still could make it more easily accessible). Fixing
+            these issues would make my dashboard much more accessible to all viewers but particularly to those with visual disabilities!
+            </li>
+        <li> Honestly, I did not take these steps because I did not even think about how I should make the dashboard accessible to those with disabilities
+            until after I had completed my homework, unfortunately -- it didn't come to mind, so it didn't factor into my design decisions. Next time, now
+            that I know what I have learned from these readings, when planning the design and layout of my dashboard, I would consider accessbility components.
+            As a result, I would natively implement things like alt text, spacing between graphs, color-blind friendly color scales, publishing CSVs of data,
+            summary descriptions of graphs, and other things. So the key thing is to think about accessibility BEFORE writing code and not after!
+
+            </li>
+
+    </ol>
     </div>
     <!--Feel free to add more JavaScript files as needed-->
     <script type="text/javascript" src="main.js"></script>
