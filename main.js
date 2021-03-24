@@ -4,9 +4,9 @@ const MAX_HEIGHT = 720;
 const margin = {top: 50, right: 100, bottom: 40, left: 100};
 
 // Assumes the same graph width, height dimensions as the example dashboard. Feel free to change these if you'd like
-let graph_1_width = (7.5*MAX_WIDTH / 12) - 10, graph_1_height = 500;
-let graph_2_width = (7.5*MAX_WIDTH / 12) - 10, graph_2_height = 500;
-let graph_3_width = MAX_WIDTH / 3.5, graph_3_height = 1000;
+let graph_1_width = (7*MAX_WIDTH / 12) - 10, graph_1_height = 500;
+let graph_2_width = (7*MAX_WIDTH / 12) - 10, graph_2_height = 500;
+let graph_3_width = (3.5*MAX_WIDTH / 12), graph_3_height = 1000;
 
 let svg_1 = d3.select("#graph1")
     .append("svg")
@@ -57,7 +57,7 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
     
     svg_1.append("g")
         .attr("class","axis")
-        .attr("transform", `translate(0,410)`)
+        .attr("transform", `translate(0,${graph_1_height - margin.top - margin.bottom})`)
         .call(d3.axisBottom(x_ax).tickValues([1872,1884,1896,1908,1920,1932,1944,1956,1968,1980,1992,2004,2016]));
 
     svg_1.append("path")
@@ -70,7 +70,7 @@ d3.csv("/data/football_clean_q1.csv").then(function(data) {
             .y(function(d) { return y_ax(parseInt(d.tournament))}))
 
     svg_1.append("text")
-            .attr("x", (graph_2_width/6.8))
+            .attr("x", (graph_1_width/6.8))
             .attr("y", -10)    // HINT: Place this at the top middle edge of the graph
             .style("text-anchor", "center")
             .style("font-size", 25)
@@ -121,26 +121,26 @@ let title = svg_2.append("text")
     .style("font-size", 25)
     
 let legend_upper = svg_2.append("text")
-    .attr("x", (margin.left + 85))
+    .attr("x", (margin.left + 35))
     .attr("y", 260)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 15)
 
 let legend_lower = svg_2.append("text")
-    .attr("x", (margin.left + 85))
+    .attr("x", (margin.left + 35))
     .attr("y", 445)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 15)
 
 let leg_disc = svg_2.append("text")
-    .attr("x", (margin.left + 85))
+    .attr("x", (margin.left + 35))
     .attr("y", 340)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 15)
     .text("Win")
 
 let leg_disc_2 = svg_2.append("text")
-    .attr("x", (margin.left + 85))
+    .attr("x", (margin.left + 35))
     .attr("y", 360)    // HINT: Place this at the top middle edge of the graph
     .style("text-anchor", "center")
     .style("font-size", 15)
@@ -206,7 +206,7 @@ function setData(val) {
             .attr("width",25)
             .attr("height",200)
             .attr("fill","url(#line_grad)")
-            .attr("transform", `translate(${margin.left + 50},${250})`);
+            .attr("transform", `translate(${margin.left},${250})`);
 
         let mouseover = function(d) {
             let html = `<strong style="color: #cf6700;">${d.id}</strong><br><p style="color: #cf6700;">${d.total}% wins</p>`;  
@@ -372,9 +372,9 @@ d3.csv("/data/ques_3_total.csv").then(function(data) {
         .on("mouseout", mouseout_3);
 
     svg_3.append("line")
-        .attr("x1",85)
+        .attr("x1",x.bandwidth())
         .attr("y1",margin.top-2)
-        .attr("x2",85)
+        .attr("x2",x.bandwidth())
         .attr("y2",920)
         .style("stroke","white")
         .style("stroke-width",8)
