@@ -29,7 +29,7 @@
             <p id="slider_line">125</p>
             </div>
 
-            <input id="slider_line" type="range" min="1" max="125" value="10" class="slider" id="myRange" onchange="setData(this.value)">
+            <input id="slider_line" type="range" min="1" max="125" value="10" class="slider" id="myRange" onchange="setMap(this.value)">
             <br><p style="position:absolute; left:300px">Drag the slider to change the number of countries shown!</p>
             <br><p></p>
         </div>
@@ -67,7 +67,12 @@
             then each category on the right shows how each country does in each category. Since these color scales were
             normalized, I also built a tooltip to actually show each value. I think the heat map was a great choice of graph
             for this question because it allows for easy comparison of different statistics between countries. This combination
-            of factors and the sum help to show which countries might be most likely to win in 2022
+            of factors and the sum help to show which countries might be most likely to win in 2022. References time... d3-graph-gallery
+            was super helpful, particularly https://www.d3-graph-gallery.com/graph/line_basic.html, https://www.d3-graph-gallery.com/graph/choropleth_basic.html,
+            and https://www.d3-graph-gallery.com/graph/heatmap_basic.html  -- d3-graph-gallery is great! I also used a few other resources
+            for creating gradients, adapting v4 reference code to v5 using the Promise function. Just wanted to cite all these helpful resources
+            since they were very helpful for making novel plots I had never made before and made this experience so rewarding!
+
             </li>
         <li>First, D3 was helpful because of its support for all sorts of different graphs -- while I could make a line
             plot easily in MatPlotLib or Excel, making a map or heat map might have been much harder. As a result, using D3
