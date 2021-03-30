@@ -18,7 +18,7 @@ let svg_1 = d3.select("#graph1")
     .append("g")
     .attr("transform", `translate(${margin.left+30},${margin.top})`);
 
-d3.csv("/data/football_clean_q1.csv").then(function(data) {
+d3.csv("./data/football_clean_q1.csv").then(function(data) {
     let x_ax = d3.scaleBand()
         .domain(data.map(d => d.date))
         // the domain should be the date listed in the cleaned CSV
@@ -175,7 +175,7 @@ let lower_disc = svg_2.append("text")
 function setMap(val) {
     // returns a value based on the number of countries indicated on the slider.
 
-    d3.csv("/data/football_clean_q2.csv").then(function(data) {
+    d3.csv("./data/football_clean_q2.csv").then(function(data) {
         // imports the CSV and uses the resulting data
     
         var map_q2 = d3.map()
@@ -345,7 +345,7 @@ let tooltip_3 = d3.select("#graph3")
 categories = ['Total Score','Win Percent','Win Margin','Total Games','Opponent Win Pct']
 
 // calls in the CSV then executes function using that data
-d3.csv("/data/ques_3_total.csv").then(function(data) {
+d3.csv("./data/ques_3_total.csv").then(function(data) {
 
     let y = d3.scaleBand()
         // we use a band scale given that we have qualitative data, where the domain is each home team!
